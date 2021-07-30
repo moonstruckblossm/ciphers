@@ -43,3 +43,31 @@
 #   2 - Remember that lists can be built up, meaning it may be useful to start with an empty list.
 #
 # WRITE DOWN THE STEPS BEFORE ATTEMPTING THE PROGRAM
+
+
+#first, determine each alphabet!
+alphabet = "abcdefghijklmnopqrstuvwxyz.,! ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+cipherAlphabet = "zyxwvutsrqponmlkjihgfedcba.,! ZYXWVUTSRQPONMLKJIHGFEDCBA"
+
+print("!".upper())
+
+#get a word from the user!
+word = input("gimme a word! ")
+
+#create a blank variable!~ this is where you'll store your new word!
+cipherWord = ""
+
+#go through each letter of the word you wanna translate!
+for letter in word:
+    #FIND the index of the letter in the alphabet!
+    letterIndex = alphabet.find(letter)
+
+    #use that index to get the cipher alphabet equivalent
+    newLetter = cipherAlphabet[letterIndex]
+
+    #add that new letter to the empty string you made!
+    cipherWord += newLetter
+
+#print your new word!
+print("original word:",word)
+print("cipher word:",cipherWord)
