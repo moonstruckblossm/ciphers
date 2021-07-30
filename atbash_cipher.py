@@ -61,10 +61,8 @@ cipherWord = ""
 for letter in word:
     #FIND the index of the letter in the alphabet!
     letterIndex = alphabet.find(letter)
-
     #use that index to get the cipher alphabet equivalent
     newLetter = cipherAlphabet[letterIndex]
-
     #add that new letter to the empty string you made!
     cipherWord += newLetter
 
